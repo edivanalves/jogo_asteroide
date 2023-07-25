@@ -917,7 +917,7 @@ Game = {
       this.state = 'waiting';
     },
     waiting: function () {
-      Text.renderText(window.ipad ? 'Touch Screen to Start' : 'Press Space to Start', 36, Game.canvasWidth/2 - 270, Game.canvasHeight/2);
+      Text.renderText(window.ipad ? 'Touch Screen to Start' : 'ESPACO PARA INICIAR', 36, Game.canvasWidth/2 - 270, Game.canvasHeight/2);
       if (KEY_STATUS.space || window.gameStart) {
         KEY_STATUS.space = false; // hack so we don't shoot right away
         window.gameStart = false;
@@ -997,7 +997,7 @@ Game = {
       }
     },
     end_game: function () {
-      Text.renderText('GAME OVER', 50, Game.canvasWidth/2 - 160, Game.canvasHeight/2 + 10);
+      Text.renderText('VOCE PERDEU', 50, Game.canvasWidth/2 - 160, Game.canvasHeight/2 + 10);
       if (this.timer == null) {
         this.timer = Date.now();
       }
